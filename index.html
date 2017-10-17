@@ -1,1 +1,44 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon's Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="http://www.dcmf.hu/images/favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <div class="field green"></div>
+      <div class="field red"></div>
+      <div class="field yellow"></div>
+      <div class="field blue"></div>
+      <div class="control-panel">
+        <h1>Simon<sup><small>&reg</small></sup></h1>
+        <div class="control-buttons">
+          <span>
+            <div class="counter red" id="counter">
+              --
+            </div>
+            <div class="control-button-title">count</div>
+          </span>
+
+          <span>
+            <div class="press-button red"></div>
+            <div class="control-button-title">start</div>
+          </span>
+
+          <span>
+            <div class="led-button red"></div>
+            <div class="press-button yellow"></div>
+            <div class="control-button-title">strict</div>
+          </span>
+        </div>
+        <div class="control-switch">
+          <span class="control-button-title">off</span>
+          <span class="control-button-title">on</span>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

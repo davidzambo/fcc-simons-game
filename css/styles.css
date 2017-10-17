@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+html,
+body,
+ul,
+ol,
+div,
+span,
+* {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.red {
+  background-color: red; }
+
+.blue {
+  background-color: blue; }
+
+.green {
+  background-color: green; }
+
+.yellow {
+  background-color: yellow; }
+
+html {
+  box-sizing: content-box;
+  font-color: #333;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 21px; }
+
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  border: 3px solid black; }
+
+.field {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  font-size: 21px;
+  border: 3px solid black; }
+
+.control-panel {
+  font-size: 21px;
+  width: 30%;
+  min-width: 200px;
+  height: 30%;
+  background-color: white;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 35%;
+  z-index: 10;
+  border: 6px solid black;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+  .control-panel h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 0.4rem; }
+  .control-panel .control-buttons {
+    width: 100%; }
+    .control-panel .control-buttons span {
+      display: inline-block;
+      width: 60px; }
+
+.opacity {
+  opacity: 0.4; }
+
+small {
+  font-size: 1.2rem;
+  font-weight: 900; }
+
+.control-button-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.counter {
+  width: 80%;
+  background-color: #440000;
+  color: red;
+  border: 3px solid black;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  margin: 0.2rem auto;
+  line-height: 2rem;
+  font-weight: 600; }
+
+.press-button {
+  margin: 0.2rem auto;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #330000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black; }
+
+.led-button {
+  margin: 0.1rem auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid #330000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FF0000; }
+
+/*# sourceMappingURL=styles.css.map */

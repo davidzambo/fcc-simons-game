@@ -1,0 +1,25 @@
+@mixin border($width, $color: black){
+  border: $width solid $color;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($width, $color:black){
+  box-shadow: $width $width $width $color,
+              $width 0-$width $width $color,
+              0-$width $width $width $color,
+              0-$width 0-$width $width $color;
+}
+
+@mixin press-button($width){
+  margin: $width * 0.2 auto;
+  width: $width;
+  height: $width;
+  @include border(2px, $deep-dark-red);
+  @include border-radius(50%);
+}
