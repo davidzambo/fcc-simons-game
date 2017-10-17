@@ -6,39 +6,46 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="http://www.dcmf.hu/images/favicon.png" type="image/x-icon">
   </head>
-  <body>
+  <body onload="reset()">
     <div class="container">
-      <div class="field green"></div>
-      <div class="field red"></div>
-      <div class="field yellow"></div>
-      <div class="field blue"></div>
+      <div class="field green" id="f0" onClick="getClick(event)"></div>
+      <div class="field red" id="f1" onClick="getClick(event)"></div>
+      <div class="field yellow" id="f2" onClick="getClick(event)"></div>
+      <div class="field blue" id="f3" onClick="getClick(event)"></div>
       <div class="control-panel">
         <h1>Simon<sup><small>&reg</small></sup></h1>
         <div class="control-buttons">
           <span>
-            <div class="counter red" id="counter">
-              --
-            </div>
+            <div class="counter red" id="counter"></div>
             <div class="control-button-title">count</div>
           </span>
 
           <span>
-            <div class="press-button red"></div>
+            <div class="press-button red" id="start"></div>
             <div class="control-button-title">start</div>
           </span>
 
           <span>
             <div class="led-button red"></div>
-            <div class="press-button yellow"></div>
+            <div class="press-button yellow" onClick="toggleStrict()"></div>
             <div class="control-button-title">strict</div>
           </span>
         </div>
         <div class="control-switch">
           <span class="control-button-title">off</span>
+            <input type="radio" name="switch" value="off" id="turnoff" checked>
+            <label for="turnoff" class="control-button-title" onClick="turnOff()"></label>
+            <input type="radio" name="switch" value="on" id="turnon">
+            <label for="turnon" class="control-button-title" onClick="turnOn()"></label>
           <span class="control-button-title">on</span>
         </div>
       </div>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+
   </body>
 </html>

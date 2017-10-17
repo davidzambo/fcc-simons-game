@@ -100,15 +100,45 @@ small{
   @include border-radius(8px);
   margin: 0.2rem auto;
   line-height: 2rem;
+  height: 2.3rem;
   font-weight: 600;
 }
 
 .press-button{
   @include press-button(1rem);
   @include box-shadow(1px);
+  &:hover{
+    cursor: pointer;
+    background-color: white;
+  }
 }
 
 .led-button{
-  @include press-button(0.5rem);
+  @include press-button(0.3rem);
   background-color: $red;
+}
+
+.control-switch{
+  margin-top: 10px;
+  font-size: 0;
+  span{
+    margin: 0 5px;
+  }
+}
+
+input[type=radio]{
+  display: none;
+  &:checked + label{
+    background-color: lightblue!important;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+label{
+  background-color: $dark-grey;
+  @include border(2px, $dark-grey);
+  padding: 0 10px;
+  cursor: pointer;
 }
