@@ -12,6 +12,196 @@ span,
 * {
   box-sizing: border-box; }
 
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  width: 100%;
+  height: 100%; }
+  .modal-container .modal {
+    position: relative;
+    background-color: white;
+    min-width: 300px;
+    min-height: 20%;
+    margin: 2% auto 0 auto;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center; }
+    .modal-container .modal p {
+      line-height: 1.5rem; }
+    .modal-container .modal button {
+      margin: 1rem;
+      padding: 0.5rem 2rem;
+      background-color: #0000FF;
+      color: white;
+      outline: none;
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase; }
+      .modal-container .modal button:hover {
+        cursor: pointer; }
+
+.dcmf-container {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .dcmf-container p {
+    border: 1px solid black;
+    position: relative;
+    background-color: #0e1717;
+    color: #eee;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    margin: 0.2rem; }
+    .dcmf-container p img {
+      height: 0.6rem;
+      vertical-align: middle; }
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  html, body {
+    font-size: 12px; }
+
+  .control-panel {
+    width: 70%;
+    left: 15%;
+    height: 30%;
+    top: 35%; }
+    .control-panel .control-buttons span {
+      width: 30px; }
+
+  .modal h1 {
+    font-size: 21px; }
+  .modal p {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 17px; } }
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  html, body {
+    font-size: 10px; }
+
+  .control-panel {
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    left: 25%;
+    height: 40%;
+    top: 30%; }
+    .control-panel .control-buttons span {
+      width: 30px; }
+
+  .modal h1 {
+    font-size: 21px; }
+  .modal p {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 17px; } }
+@media only screen and (min-width: 321px) and (max-width: 360px) and (orientation: portrait) {
+  html, body {
+    font-size: 12px; }
+
+  .control-panel {
+    width: 60%;
+    left: 20%;
+    height: 20%;
+    top: 40%; }
+    .control-panel .control-buttons span {
+      width: 30px; }
+
+  .modal p {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 17px; } }
+@media only screen and (min-width: 481px) and (max-width: 640px) and (orientation: landscape) {
+  html, body {
+    font-size: 12px; }
+
+  .control-panel {
+    width: 40%;
+    left: 30%;
+    height: 40%;
+    top: 30%; }
+    .control-panel .control-buttons span {
+      width: 30px; }
+
+  .modal {
+    width: 90%; }
+    .modal p {
+      padding-top: 15px;
+      font-size: 15px;
+      line-height: 17px; } }
+@media only screen and (min-width: 361px) and (max-width: 768px) and (orientation: portrait) {
+  html, body {
+    font-size: 21px; }
+
+  .control-panel {
+    width: 30%;
+    min-width: 200px;
+    left: 35%;
+    height: 20%;
+    top: 40%; }
+    .control-panel h1 {
+      padding-top: 5%; }
+    .control-panel .control-buttons span {
+      width: 60px; }
+
+  .modal {
+    margin-top: 20%;
+    width: 60%; } }
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  html, body {
+    font-size: 21px; }
+
+  .control-panel {
+    width: 30%;
+    min-width: 200px;
+    left: 35%;
+    height: 30%;
+    top: 35%; }
+    .control-panel h1 {
+      padding-top: 5%; }
+    .control-panel .control-buttons span {
+      width: 60px; }
+
+  .modal {
+    margin-top: 20%;
+    width: 60%; } }
+@media only screen and (min-width: 769px) and (orientation: portrait) {
+  html, body {
+    font-size: 21px; }
+
+  .control-panel {
+    width: 30%;
+    min-width: 200px;
+    left: 35%;
+    height: 20%;
+    top: 40%; }
+    .control-panel h1 {
+      padding-top: 5%; }
+    .control-panel .control-buttons span {
+      width: 60px; }
+
+  .modal {
+    margin-top: 20%;
+    width: 60%; } }
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
+  html, body {
+    font-size: 21px; }
+
+  .control-panel {
+    width: 30%;
+    min-width: 200px;
+    left: 35%;
+    height: 30%;
+    top: 35%; }
+    .control-panel h1 {
+      padding-top: 5%; }
+    .control-panel .control-buttons span {
+      width: 60px; }
+
+  .modal {
+    margin-top: 20%;
+    width: 40%; } }
 .red {
   background-color: red; }
 
@@ -24,11 +214,13 @@ span,
 .yellow {
   background-color: yellow; }
 
+.pink {
+  background-color: pink; }
+
 html {
   box-sizing: content-box;
   font-color: #333;
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-size: 21px; }
+  font-family: "Fira Sans Extra Condensed", sans-serif; }
 
 body {
   position: absolute;
@@ -39,7 +231,8 @@ body {
   width: 100%;
   height: 100%;
   font-size: 0;
-  border: 3px solid black; }
+  border: 3px solid black;
+  z-index: 15; }
 
 .field {
   display: inline-block;
@@ -52,14 +245,9 @@ body {
 
 .control-panel {
   font-size: 21px;
-  width: 30%;
-  min-width: 200px;
-  height: 30%;
   background-color: white;
   position: absolute;
   text-align: center;
-  top: 35%;
-  left: 35%;
   z-index: 10;
   border: 6px solid black;
   -webkit-border-radius: 50%;
@@ -68,8 +256,7 @@ body {
   border-radius: 50%; }
   .control-panel h1 {
     font-size: 2rem;
-    text-align: center;
-    padding-top: 0.4rem; }
+    text-align: center; }
   .control-panel .control-buttons {
     width: 100%; }
     .control-panel .control-buttons span {
@@ -114,18 +301,17 @@ small {
   box-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black; }
   .press-button:hover {
     cursor: pointer;
-    background-color: white; }
+    opacity: 0.85; }
 
 .led-button {
-  margin: 0.06rem auto;
-  width: 0.3rem;
-  height: 0.3rem;
+  margin: 0.08rem auto;
+  width: 0.4rem;
+  height: 0.4rem;
   border: 2px solid #330000;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #FF0000; }
+  border-radius: 50%; }
 
 .control-switch {
   margin-top: 10px;
@@ -145,5 +331,13 @@ label {
   border: 2px solid #090f0f;
   padding: 0 10px;
   cursor: pointer; }
+
+mark {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.text-justify {
+  text-align: justify; }
 
 /*# sourceMappingURL=styles.css.map */

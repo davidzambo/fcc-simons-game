@@ -1,0 +1,18 @@
+.dcmf-container{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  p{
+    border: 1px solid black;
+    position: relative;
+    background-color: #0e1717;
+    color: #eee;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    margin: 0.2rem;
+    img{
+      height: 0.6rem;
+      vertical-align: middle;
+    }
+  }
+}

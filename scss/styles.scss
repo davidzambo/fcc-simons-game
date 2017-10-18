@@ -4,8 +4,11 @@
 @import 'typography';
 @import 'variables';
 @import 'mixin';
+@import 'modal';
+@import 'dcmf';
+@import 'mediaqueries';
 
-$colors: (red, blue, green, yellow);
+$colors: (red, blue, green, yellow, pink);
 
 @each $color in $colors{
   .#{$color}{
@@ -16,12 +19,12 @@ $colors: (red, blue, green, yellow);
 // * {
 //   @include border(1px);
 // }
+
 html{
   box-sizing: content-box;
   font : {
     color: $font-color;
     family: $font;
-    size: $font-size;
   }
 }
 body{
@@ -35,6 +38,7 @@ body{
   height: 100%;
   font-size: 0;
   @include border(3px);
+  z-index: 15;
 }
 
 .field {
@@ -49,14 +53,9 @@ body{
 
 .control-panel{
   font-size: $font-size;
-  width: $control-panel-width;
-  min-width: 200px;
-  height: $control-panel-width;
   background-color: white;
   position: absolute;
   text-align: center;
-  top: 35%;
-  left: 35%;
   z-index: 10;
   @include border(6px);
   @include border-radius(50%);
@@ -64,7 +63,7 @@ body{
   h1{
     font-size: 2rem;
     text-align: center;
-    padding-top: 0.4rem;
+    // padding-top: 0.4rem;
   }
 
   .control-buttons{
@@ -109,13 +108,12 @@ small{
   @include box-shadow(1px);
   &:hover{
     cursor: pointer;
-    background-color: white;
+    opacity: 0.85;
   }
 }
 
 .led-button{
-  @include press-button(0.3rem);
-  background-color: $red;
+  @include press-button(0.4rem);
 }
 
 .control-switch{
@@ -141,4 +139,14 @@ label{
   @include border(2px, $dark-grey);
   padding: 0 10px;
   cursor: pointer;
+}
+
+mark{
+  padding: 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.text-justify{
+  text-align: justify;
 }

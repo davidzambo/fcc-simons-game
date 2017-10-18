@@ -2,21 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FACEBOOK SHARING METATAGS -->
+    <meta property="og:url"                content="http://www.dcmf.hu/freecodecamp/simon-game" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Simon game" />
+    <meta property="og:description"        content="How good is your memory? Check and improve it now!" />
+    <meta property="og:image"              content="http://www.dcmf.hu/freecodecamp/simon-game/images/teaser.png" />
+
     <title>Simon's Game</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
     <link rel="icon" href="http://www.dcmf.hu/images/favicon.png" type="image/x-icon">
   </head>
   <body onload="reset()">
-    <div class="container">
-      <div class="field green" id="f0" onClick="getClick(event)"></div>
-      <div class="field red" id="f1" onClick="getClick(event)"></div>
-      <div class="field yellow" id="f2" onClick="getClick(event)"></div>
-      <div class="field blue" id="f3" onClick="getClick(event)"></div>
+    <div class="container" id="container">
+      <div class="field green" id="f0"></div>
+      <div class="field red" id="f1"></div>
+      <div class="field yellow" id="f2"></div>
+      <div class="field blue" id="f3"></div>
       <div class="control-panel">
         <h1>Simon<sup><small>&reg</small></sup></h1>
         <div class="control-buttons">
           <span>
-            <div class="counter red" id="counter"></div>
+            <div class="counter" id="counter"></div>
             <div class="control-button-title">count</div>
           </span>
 
@@ -26,7 +38,7 @@
           </span>
 
           <span>
-            <div class="led-button red"></div>
+            <div class="led-button pink"></div>
             <div class="press-button yellow" onClick="toggleStrict()"></div>
             <div class="control-button-title">strict</div>
           </span>
@@ -41,11 +53,25 @@
         </div>
       </div>
     </div>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <div class="modal-body">
+          <h1 id="modal-title">Welcome to the Simon game!</h1>
+          <p id="modal-message" class="text-justify">This game is about to train your memory.<br/><br/>
+                                Switch it <mark>on</mark>, click on the <mark>start</mark> button, listen the fields which had been pressed,
+                                and repeate them.<br/><br/>
+                                If you repeate it in the right order, a new field will be added, but if you make a mistake,
+                                the last row will be shown you, and you can try it again.<br/><br/>
+                                If you click on <mark>strict</mark> mode, every mistake will reset the current game.
+                                Your task is to reach <mark>20</mark> steps.<br/><br/>
+                                Are you ready?</p>
+          <button type="button" name="button" onClick="hideModal();" id="okay-button">ok</button>
+        </div>
+      </div>
+    </div>
+    <footer class="dcmf-container">
+      <p>coded by <a href="http://www.dcmf.hu" target="_blank"><img src="http://www.dcmf.hu/images/dcmf-letters.png" alt="David's Code ManuFactory logo" /></a></p>
+    </footer>
     <script src="js/script.js"></script>
-
   </body>
 </html>
